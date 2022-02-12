@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Garlico.in | {{title}}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel="icon" href="../images/grlc.png">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="five columns">
+        <img class="nav-logo" alt="Garlicoin" src="../images/grlc.png">
+        <span class="nav-label">Garlico.in {{name}}</span>
+      </div>
+      <div class="seven columns right">
+        <a class="button button-primary nav-button" href="/">Home</a>
+        <a class="button button-primary nav-button active" href="/workers">Workers</a>
+        <a class="button button-primary nav-button" href="#">Current Block</a>
+        <a class="button button-primary nav-button" href="#">Donate</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <table class="u-full-width history">
+        <thead>
+          <tr>
+            <th colspan="4">Miner {{miner_id}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Worker Count</td>
+            <td>{{worker_count}}</td>
+          </tr>
+          <tr>
+            <td>Payout Address</td>
+            <td>{{{payout_address}}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <table class="u-full-width history">
+        <thead>
+          <tr>
+            <th colspan="4">Workers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>Hashrate</td>
+          </tr>          
+          {{{worker_list}}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

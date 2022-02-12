@@ -20,8 +20,8 @@
         <span class="nav-label">Garlico.in {{name}}</span>
       </div>
       <div class="seven columns right">
-        <a class="button button-primary nav-button active" href="#">Home</a>
-        <a class="button button-primary nav-button" href="#">Workers</a>
+        <a class="button button-primary nav-button active" href="/">Home</a>
+        <a class="button button-primary nav-button" href="/workers">Workers</a>
         <a class="button button-primary nav-button" href="#">Current Block</a>
         <a class="button button-primary nav-button" href="#">Donate</a>
       </div>
@@ -82,40 +82,6 @@
     </div>
 
     <div class="row">
-      <table class="u-full-width chart">
-        <thead>
-          <tr>
-            <th>Hashrate vs Solved Blocks</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <canvas id="hashChart" height="100"></canvas>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="row">
-      <table class="u-full-width chart">
-        <thead>
-          <tr>
-            <th>Pool's Luck</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <canvas id="luckChart" height="100"></canvas>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="row">
       <table class="u-full-width history">
         <thead>
           <tr>
@@ -127,62 +93,9 @@
             <td>Status</td>
             <td>Block Height</td>
             <td>Miner Address</td>
-            <td>Hashrate</td>
+            <td>Timestamp</td>
           </tr>
-          <tr>
-            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
-            <td><a href="example">3116209</a></td>
-            <td><a href="example">GJK3LBDHxL1WHsL6whh4tY3kukBuarvWYu</a></td>
-            <td>19.41 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
-            <td><a href="example">3116211</a></td>
-            <td><a href="example">MVCkaVDuSCA5sxZC3ZneYeKsihrQ1uoEQJ</a></td>
-            <td>124.55 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
-            <td><a href="example">3116210</a></td>
-            <td><a href="example">MA1dZm8dMrPUiMHQRQqtDGu9TUoU5dMfEU</a></td>
-            <td>16.06 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
-            <td><a href="example">3116198</a></td>
-            <td><a href="example">GfHPewnF99pKaXQQ4UvXWqmjmBBPYYxmLM</a></td>
-            <td>58.93 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
-            <td><a href="example">3116209</a></td>
-            <td><a href="example">GJK3LBDHxL1WHsL6whh4tY3kukBuarvWYu</a></td>
-            <td>18.48 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
-            <td><a href="example">3116192</a></td>
-            <td><a href="example">M8nvnvjNvYWqVs9aqCYXBB9Gk3nYndyCs6</a></td>
-            <td>3.94 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
-            <td><a href="example">3116158</a></td>
-            <td><a href="example">MRX74xRshf5s26Akbqj9TyT6ogRQ7Yyw65</a></td>
-            <td>4.59 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
-            <td><a href="example">3116168</a></td>
-            <td><a href="example">GWmcS9ciY7NokRY27Jtw2UccqE6AoKmf44</a></td>
-            <td>6.11 MH/s</td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
-            <td><a href="example">3116209</a></td>
-            <td><a href="example">GJK3LBDHxL1WHsL6whh4tY3kukBuarvWYu</a></td>
-            <td>5.92 MH/s</td>
-          </tr>
+          {{{mining_history}}}
         </tbody>
       </table>
     </div>
