@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Garlico.in | {{title}}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel="icon" href="images/grlc.png">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="five columns">
+        <img class="nav-logo" alt="Garlicoin" src="images/grlc.png">
+        <span class="nav-label">Garlico.in {{name}}</span>
+      </div>
+      <div class="seven columns right">
+        <a class="button button-primary nav-button active" href="#">Home</a>
+        <a class="button button-primary nav-button" href="#">Workers</a>
+        <a class="button button-primary nav-button" href="#">Current Block</a>
+        <a class="button button-primary nav-button" href="#">Donate</a>
+      </div>
+    </div>
+    
+    <div class="row">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th colspan="2">Mining Pool Statistics</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              Current block being mined
+            </td>
+            <td>{{current_block}}</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-users" aria-hidden="true"></i>
+              Number of workers
+            </td>
+            <td>{{workers}}</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-server" aria-hidden="true"></i>
+              Estimated pool hashrate
+            </td>
+            <td>{{pool_hash_rate}}</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-globe-w" aria-hidden="true"></i>
+              Global Garlicoin hashrate
+            </td>
+            <td>{{network_hash_rate}}</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-money" aria-hidden="true"></i>
+              Amount donated today
+            </td>
+            <td>420 GRLC</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              Last payout
+            </td>
+            <td>{{last_payout}} UTC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <table class="u-full-width chart">
+        <thead>
+          <tr>
+            <th>Hashrate vs Solved Blocks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <canvas id="hashChart" height="100"></canvas>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <table class="u-full-width chart">
+        <thead>
+          <tr>
+            <th>Pool's Luck</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <canvas id="luckChart" height="100"></canvas>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <table class="u-full-width history">
+        <thead>
+          <tr>
+            <th colspan="4">Pool mining history</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Status</td>
+            <td>Block Height</td>
+            <td>Miner Address</td>
+            <td>Hashrate</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
+            <td><a href="example">3116209</a></td>
+            <td><a href="example">GJK3LBDHxL1WHsL6whh4tY3kukBuarvWYu</a></td>
+            <td>19.41 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
+            <td><a href="example">3116211</a></td>
+            <td><a href="example">MVCkaVDuSCA5sxZC3ZneYeKsihrQ1uoEQJ</a></td>
+            <td>124.55 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
+            <td><a href="example">3116210</a></td>
+            <td><a href="example">MA1dZm8dMrPUiMHQRQqtDGu9TUoU5dMfEU</a></td>
+            <td>16.06 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
+            <td><a href="example">3116198</a></td>
+            <td><a href="example">GfHPewnF99pKaXQQ4UvXWqmjmBBPYYxmLM</a></td>
+            <td>58.93 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-refresh" aria-hidden="true" title="Unconfirmed"></i></td>
+            <td><a href="example">3116209</a></td>
+            <td><a href="example">GJK3LBDHxL1WHsL6whh4tY3kukBuarvWYu</a></td>
+            <td>18.48 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
+            <td><a href="example">3116192</a></td>
+            <td><a href="example">M8nvnvjNvYWqVs9aqCYXBB9Gk3nYndyCs6</a></td>
+            <td>3.94 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
+            <td><a href="example">3116158</a></td>
+            <td><a href="example">MRX74xRshf5s26Akbqj9TyT6ogRQ7Yyw65</a></td>
+            <td>4.59 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
+            <td><a href="example">3116168</a></td>
+            <td><a href="example">GWmcS9ciY7NokRY27Jtw2UccqE6AoKmf44</a></td>
+            <td>6.11 MH/s</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-check-circle" aria-hidden="true" title="Confirmed"></i></td>
+            <td><a href="example">3116209</a></td>
+            <td><a href="example">GJK3LBDHxL1WHsL6whh4tY3kukBuarvWYu</a></td>
+            <td>5.92 MH/s</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Render Icon Pack -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.3.1/chartjs-plugin-annotation.min.js"></script>
+
+  <!-- Hash Rate Chart -->
+  <script>
+    const hashCtx = document.getElementById('hashChart').getContext('2d');
+    const hashChart = new Chart(hashCtx, {
+        type: 'line',
+        data: {
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+            datasets: [{
+                label: 'Hashrate',
+                data: [31.5, 30.2, 33.3, 32.9, 31.7, 35.6],
+                borderWidth: 2,
+                backgroundColor: '#2ecc71'
+            },
+            {
+                label: 'Solved blocks',
+                data: [30, 28.4, 29.2, 31.5, 30.4, 33.6],
+                borderWidth: 2,
+                backgroundColor: '#3498db'
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    ticks: {
+                      callback: function(value, index, ticks) {
+                        return value + '%';
+                      },
+                      stepSize: 10
+                    }
+                }
+            }
+        }
+    });
+  </script>
+
+  <!-- Pool Luck Chart -->
+  <script>
+    const luckCtx = document.getElementById('luckChart').getContext('2d');
+    const luckChart = new Chart(luckCtx, {
+        type: 'line',
+        data: {
+            labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+            datasets: [{
+                label: 'Pool\'s Luck',
+                data: [120.1, 78.9, 122.4, 82.6, 111.1, 93.3],
+                borderWidth: 2,
+                backgroundColor: '#e74c3c'
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                      callback: function(value, index, ticks) {
+                        return value + '%';
+                      },
+                      stepSize: 25
+                    },
+                    max: 175
+                }
+            },
+          plugins: {
+            annotation: {
+              annotations: {
+                hundred: {
+                  type: 'line',
+                  yMin: 100,
+                  yMax: 100,
+                  borderColor: 'rgba(0, 0, 0, 0.2)',
+                  borderWidth: 2,
+                }
+              }
+            }
+          }
+        }
+    });
+  </script>
+</body>
+</html>

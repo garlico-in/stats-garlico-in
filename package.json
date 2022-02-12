@@ -1,0 +1,19 @@
+{
+  "name": "pool-statistics",
+  "version": "1.0.0",
+  "description": "A webpage to display foundation-server pool statistics",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "consolidate": "^0.16.0",
+    "date-and-time": "^2.1.1",
+    "express": "^4.17.2",
+    "hogan.js": "^3.0.2"
+  }
+}
