@@ -8,7 +8,7 @@ const date = require('date-and-time')
 
 // Global Variables
 let pool_data = "";
-let miner_data = [];
+let miner_data = {};
 let block_data = {};
 let block_order = [];
 let worker_data = [];
@@ -19,13 +19,18 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-
 // Index
 app.get('/', function (req, res) {
 
+  // Base URL
+  base_url = req.headers.host
+  if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
+    base_url = "http://" + base_url;
+  }
+
   // No Data Available
   if (pool_data == "") {
-    res.render('loading', { title: "Application Starting..." });
+    res.render('loading', { base_url: base_url, title: "Application Starting..." });
     return;
   }
   
@@ -53,7 +58,7 @@ app.get('/', function (req, res) {
       // HTML
       tmp = "<tr>"
       tmp += "<td><i class=\"fa fa-" + icon + "\" aria-hidden=\"true\" title=\"" + block_data[number].status + "\"></i></td>"
-      tmp += "<td><a href=\"https://garli.co.in/block/" + block_data[number].hash + "\">" + block_data[number].height + "</a></td>"
+      tmp += "<td><a href=\"https://garlicoin.info/#/GRLC/mainnet/block/" + block_data[number].hash + "\">" + block_data[number].height + "</a></td>"
       tmp += "<td><a href=\"worker/" + block_data[number].worker + "\">" + block_data[number].worker + "</a></td>"
       tmp += "<td>" + date.format(hash_time, "MMM DD") + " at " + date.format(hash_time, "h:MM:ss"); + "</td>"
       tmp += "</tr>"
@@ -65,6 +70,7 @@ app.get('/', function (req, res) {
     res.render('index', {
 
       // Page Details
+      base_url: base_url,
       title: "Pool Statistics",
       name: "Statistics",
       
@@ -90,9 +96,15 @@ app.get('/', function (req, res) {
 // Workers
 app.get('/workers', function (req, res) {
   
+  // Base URL
+  base_url = req.headers.host
+  if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
+    base_url = "http://" + base_url;
+  }
+
   // No Data Available
-  if (miner_data.length == 0) {
-    res.render('loading', { title: "No worker data currently available..." });
+  if (miner_data == {}) {
+    res.render('loading', { base_url: base_url, title: "No worker data currently available..." });
     return;
   }
   
@@ -101,19 +113,20 @@ app.get('/workers', function (req, res) {
 
     // Block Data
     active_miners = "";
-    for(node of miner_data)
-    {
+    
+    for (const [key, value] of Object.entries(miner_data)) {
       tmp = "<tr>";
-      tmp += "<td><a href=\"worker/" + node["miner"] + "\">" + node["miner"] + "</a></td>";
-      tmp += "<td>" + hashCalculator(node["hashrate"]) + "</td>";
+      tmp += "<td><a href=\"worker/" + value["miner"] + "\">" + value["miner"] + "</a></td>";
+      tmp += "<td>" + hashCalculator(value["hashrate"]) + "</td>";
       tmp += "</tr>";
       active_miners += tmp;
-    };
+    }
 
     // Render Page
     res.render('workers', {
 
       // Page Details
+      base_url: base_url,
       title: "Active Workers",
       name: "Workers",
       
@@ -131,22 +144,28 @@ app.get('/workers', function (req, res) {
 // Specific Worker 
 app.get('/worker/*', function (req, res) {
 
+  // Base URL
+  base_url = req.headers.host
+  if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
+    base_url = "http://" + base_url;
+  }
+
   // No Data Available
-  if (worker_data.length == 0) {
-    res.render('loading', { title: "No worker data currently available..." });
+  if (Object.entries(miner_data).length == 0) {
+    res.render('loading', { base_url: base_url, title: "No worker data currently available..." });
     return;
   }
   
   // Load Data 
   try {
     
-    // Miner ID
+    // Miner Details
     miner_id = req.url.replace("/worker/", "");
 
     // Worker Details
     worker_list = [];
-    payout_address = "<a href=\"https://garli.co.in/address/" + miner_id + "\">" + miner_id + "</a>";
-
+    payout_address = "<a href=\"https://garlicoin.info/#/GRLC/mainnet/address/" + miner_id + "\">" + miner_id + "</a>";
+    
     worker_data.forEach(function(node){
 
       if (node.worker.startsWith(miner_id)){
@@ -182,6 +201,7 @@ app.get('/worker/*', function (req, res) {
     res.render('worker', {
 
       // Page Details
+      base_url: base_url,
       title: "Worker Details",
       name: "Worker",
 
@@ -302,7 +322,11 @@ function refreshMinerData() {
     miner_json = res.data.body;
     
     // Shared Workers
-    miner_data = miner_json["primary"]["shared"];
+    tmp_data = miner_json["primary"]["shared"];
+    tmp_data.forEach(function(miner){
+      id = miner.miner
+      miner_data[id] = miner;
+    });
 
   })
   .catch(error => {
