@@ -263,7 +263,7 @@ function refreshSummaryData() {
   
   // API Request
   axios
-  .get('http://pool.garlico.in:3001/api/v1/GarlicoinFedPool/statistics')
+  .get('http://pool.garlico.in:3001/api/v1/garlicoin/statistics')
   .then(res => {
     pool_data = res.data.body
   })
@@ -279,7 +279,7 @@ function refreshBlockData() {
   
   // API Request
   axios
-  .get('http://pool.garlico.in:3001/api/v1/GarlicoinFedPool/blocks')
+  .get('http://pool.garlico.in:3001/api/v1/garlicoin/blocks')
   .then(res => {
 
     block_json = res.data.body;
@@ -316,7 +316,7 @@ function refreshMinerData() {
   
   // API Request
   axios
-  .get('http://pool.garlico.in:3001/api/v1/GarlicoinFedPool/miners')
+  .get('http://pool.garlico.in:3001/api/v1/garlicoin/miners')
   .then(res => {
 
     miner_json = res.data.body;
@@ -341,7 +341,7 @@ function refreshWorkerData() {
   
   // API Request
   axios
-  .get('http://pool.garlico.in:3001/api/v1/GarlicoinFedPool/workers')
+  .get('http://pool.garlico.in:3001/api/v1/garlicoin/workers')
   .then(res => {
 
     worker_json = res.data.body;
