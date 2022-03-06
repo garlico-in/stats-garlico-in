@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Garlico.in | {{title}}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <link rel="icon" href="{{base_url}}/images/grlc.png">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{base_url}}/css/custom.css">
+  <link rel="stylesheet" href="{{base_url}}/css/normalize.css">
+  <link rel="stylesheet" href="{{base_url}}/css/skeleton.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="five columns">
+        <img class="nav-logo" alt="Garlicoin" src="{{base_url}}/images/grlc.png">
+        <span class="nav-label">Garlico.in {{name}}</span>
+      </div>
+      <div class="seven columns right">
+        <a class="button button-primary nav-button active" href="/">Home</a>
+        <a class="button button-primary nav-button" href="/workers">Workers</a>
+        <a class="button button-primary nav-button" href="#">Current Block</a>
+        <a class="button button-primary nav-button" href="#">Donate</a>
+        <a class="button button-primary nav-button" href="#">About</a>
+        <a class="button button-primary nav-button" href="/connect">Connect</a>
+      </div>
+    </div>
+    
+    <div class="row">
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th colspan="2">Mine with us</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <i class="fa fa-id-card" aria-hidden="true"></i>
+              Statistics
+            </td>
+            <td>stats.garlico.in</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-usd" aria-hidden="true"></i>
+              Global
+            </td>
+            <td>stratum+tcp://pool.garlico.in:3002</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-spinner" aria-hidden="true"></i>
+              United States (Ohio)
+            </td>
+            <td>stratum+tcp://us.node.garlico.in:3002</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-heartbeat" aria-hidden="true"></i>
+              Canada (Montreal)
+            </td>
+            <td>stratum+tcp://ca.node.garlico.in:3002 </td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              Germany
+            </td>
+            <td>stratum+tcp://de.node.garlico.in:3002</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+              Singapore
+            </td>
+            <td>stratum+tcp://sg.node.garlico.in:3002</td>
+          </tr>
+            <td>
+              <i class="fa fa-server" aria-hidden="true"></i>
+              Brazil - Trial (São Paulo)
+            </td>
+            <td>stratum+tcp://br.node.garlico.in:3002</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-globe-w" aria-hidden="true"></i>
+              China - Trial (Beijing)
+            </td>
+            <td>stratum+tcp://cn.node.garlico.in:3002</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-bullseye" aria-hidden="true"></i>
+              Minimum payout
+            </td>
+            <td>{{minimum_payout}} GRLC</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-money" aria-hidden="true"></i>
+              Pool fee
+            </td>
+            <td>{{pool_fee}}%</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-refresh" aria-hidden="true"></i>
+              Payout interval
+            </td>
+            <td>{{payment_interval}}h</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <!-- Render Icon Pack -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+
+</body>
+</html>
