@@ -37,19 +37,48 @@
         <tbody>
           <tr>
             <td>
-              <i class="fa fa-info-circle" aria-hidden="true"></i>
+              <i class="fa fa-id-card" aria-hidden="true"></i>
+              Pool Coin
+            </td>
+            <td>{{coin_name}}</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-usd" aria-hidden="true"></i>
+              Symbol
+            </td>
+            <td>{{coin_symbol}}</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-spinner" aria-hidden="true"></i>
+              Algorithm
+            </td>
+            <td>{{algorithm}}</td>
+          </tr>
+          <tr>
+          <tr>
+            <td>
+              <i class="fa fa-heartbeat" aria-hidden="true"></i>
               Current block being mined
             </td>
             <td>{{current_block}}</td>
           </tr>
           <tr>
             <td>
-              <i class="fa fa-users" aria-hidden="true"></i>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              Number of miners
+            </td>
+            <td>{{miners}}</td>
+          </tr>
+          <tr>
+          <tr>
+            <td>
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
               Number of workers
             </td>
             <td>{{workers}}</td>
           </tr>
-          <tr>
             <td>
               <i class="fa fa-server" aria-hidden="true"></i>
               Estimated pool hashrate
@@ -72,10 +101,17 @@
           </tr>
           <tr>
             <td>
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              <i class="fa fa-hourglass-start" aria-hidden="true"></i>
               Last payout
             </td>
             <td>{{last_payout}} UTC</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+              Next payout
+            </td>
+            <td>{{next_payout}} UTC</td>
           </tr>
         </tbody>
       </table>
