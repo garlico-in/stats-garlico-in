@@ -233,6 +233,48 @@ app.get('/worker/*', function (req, res) {
 
 });
 
+// Connect
+app.get('/connect', function (req, res) {
+  
+  // Base URL
+  base_url = req.headers.host
+  if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
+    base_url = "http://" + base_url;
+  }
+
+  // No Data Available
+  if (miner_data == {}) {
+    res.render('loading', { base_url: base_url, title: "No worker data currently available..." });
+    return;
+  }
+  
+  // Load Data 
+  try {
+
+    pool_fee_int = pool_data["primary"]["config"]["recipientFee"]*100;
+    payment_interval_hours = pool_data["primary"]["config"]["paymentInterval"]/3600;
+
+    // Render Page
+    res.render('connect', {
+
+      // Page Details
+      base_url: base_url,
+      title: "Connect",
+      name: "Connect",
+
+      //Pool Details
+      minimum_payout: pool_data["primary"]["config"]["minPayment"],
+      payment_interval: payment_interval_hours,
+      pool_fee: pool_fee_int,
+    
+    });
+
+  } catch (err) {
+    console.error(err)
+  }
+
+});
+
 // Calculate Hash Rate
 function hashCalculator(rate) {
 
