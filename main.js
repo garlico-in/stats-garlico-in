@@ -4,9 +4,7 @@ var express = require('express')
   , app = express()
   , fs = require('fs');
 
-const { time } = require('console');
 const date = require('date-and-time');
-const { syncBuiltinESMExports } = require('module');
 
 // Global Variables
 let pool_data = "";
