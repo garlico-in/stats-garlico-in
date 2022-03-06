@@ -39,7 +39,9 @@ app.get('/', function (req, res) {
 
     // Formatting
     payout_date = new Date(pool_data["primary"]["payments"]["last"])
+    next_payout_date = new Date(pool_data["primary"]["payments"]["next"])
     formatted_payout_date = date.format(payout_date, "h:MM:ss");
+    formatted_next_payout_date = date.format(next_payout_date, "h:MM:ss")
 
     // Block Data
     mining_history = ""
@@ -75,11 +77,16 @@ app.get('/', function (req, res) {
       name: "Statistics",
       
       // Statistics
+      coin_name: pool_data["primary"]["config"]["coin"],
+      coin_symbol: pool_data["primary"]["config"]["symbol"],
+      algorithm: pool_data["primary"]["config"]["algorithm"],
       current_block: pool_data["primary"]["network"]["height"],
       workers: pool_data["primary"]["status"]["workers"],
-      last_payout: formatted_payout_date,
+      miners: pool_data["primary"]["status"]["miners"],
       pool_hash_rate: hashCalculator(pool_data["primary"]["hashrate"]["shared"]),
       network_hash_rate: hashCalculator(pool_data["primary"]["network"]["hashrate"]),
+      last_payout: formatted_payout_date,
+      next_payout: formatted_next_payout_date,
 
       // Mining History
       mining_history: mining_history
