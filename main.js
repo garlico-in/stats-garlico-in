@@ -4,7 +4,9 @@ var express = require('express')
   , app = express()
   , fs = require('fs');
 
-const date = require('date-and-time')
+const { time } = require('console');
+const date = require('date-and-time');
+const { syncBuiltinESMExports } = require('module');
 
 // Global Variables
 let pool_data = "";
@@ -42,6 +44,8 @@ app.get('/', function (req, res) {
     next_payout_date = new Date(pool_data["primary"]["payments"]["next"])
     formatted_payout_date = date.format(payout_date, "h:MM:ss");
     formatted_next_payout_date = date.format(next_payout_date, "h:MM:ss")
+    pool_fee_int = pool_data["primary"]["config"]["recipientFee"]*100;
+    payment_interval_hours = pool_data["primary"]["config"]["paymentInterval"]/3600;
 
     // Block Data
     mining_history = ""
@@ -87,6 +91,9 @@ app.get('/', function (req, res) {
       network_hash_rate: hashCalculator(pool_data["primary"]["network"]["hashrate"]),
       last_payout: formatted_payout_date,
       next_payout: formatted_next_payout_date,
+      minimum_payout: pool_data["primary"]["config"]["minPayment"],
+      payment_interval: payment_interval_hours,
+      pool_fee: pool_fee_int,
 
       // Mining History
       mining_history: mining_history

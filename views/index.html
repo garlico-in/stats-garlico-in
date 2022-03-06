@@ -57,27 +57,25 @@
             <td>{{algorithm}}</td>
           </tr>
           <tr>
-          <tr>
             <td>
               <i class="fa fa-heartbeat" aria-hidden="true"></i>
-              Current block being mined
+              Blocks since genesis
             </td>
-            <td>{{current_block}}</td>
+            <td>{{current_block}} </td>
           </tr>
           <tr>
             <td>
               <i class="fa fa-user" aria-hidden="true"></i>
               Number of miners
             </td>
-            <td>{{miners}}</td>
+            <td>{{miners}} Addresses</td>
           </tr>
-          <tr>
           <tr>
             <td>
               <i class="fa fa-user-plus" aria-hidden="true"></i>
               Number of workers
             </td>
-            <td>{{workers}}</td>
+            <td>{{workers}} Rigs</td>
           </tr>
             <td>
               <i class="fa fa-server" aria-hidden="true"></i>
@@ -94,7 +92,7 @@
           </tr>
           <tr>
             <td>
-              <i class="fa fa-money" aria-hidden="true"></i>
+              <i class="fa fa-gift" aria-hidden="true"></i>
               Amount donated today
             </td>
             <td>XXXXXXX</td>
@@ -112,6 +110,27 @@
               Next payout
             </td>
             <td>{{next_payout}} UTC</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-bullseye" aria-hidden="true"></i>
+              Minimum payout
+            </td>
+            <td>{{minimum_payout}} GRLC</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-money" aria-hidden="true"></i>
+              Pool fee
+            </td>
+            <td>{{pool_fee}}%</td>
+          </tr>
+          <tr>
+            <td>
+              <i class="fa fa-refresh" aria-hidden="true"></i>
+              Payout interval
+            </td>
+            <td>{{payment_interval}}h</td>
           </tr>
         </tbody>
       </table>
