@@ -1,18 +1,18 @@
-##Special Thanks
+# Special Thanks
 
 Thanks to everyone who supported this effort
 
-#FreshGRLC.net
+## FreshGRLC.net
 nuclearsnake
 drangon
 
-#GRLC'cord
+## GRLC'cord
 mecs
 Josh
 Darrien
 Kryptonite
 
-#Garlicoin Federation
+## Garlicoin Federation
 notafoolsgarden
 Studio271
 Pa7i
