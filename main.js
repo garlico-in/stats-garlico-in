@@ -221,6 +221,7 @@ app.get('/worker/*', function (req, res) {
       miner_id: miner_id,
       worker_count: worker_list.length,
       payout_address: payout_address,
+      total_hashrate: miner_data["body"]["primary"]["shared"][miner_id]["hashrate"],
 
       // Worker List
       worker_list: worker_list_html
@@ -243,7 +244,7 @@ app.get('/connect', function (req, res) {
   }
 
   // No Data Available
-  if (miner_data == {}) {
+  if (pool_data == {}) {
     res.render('loading', { base_url: base_url, title: "No worker data currently available..." });
     return;
   }
