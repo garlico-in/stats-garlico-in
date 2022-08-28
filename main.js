@@ -2,7 +2,8 @@ var express = require('express')
   , cons = require('consolidate')
   , axios = require('axios')
   , app = express()
-  , fs = require('fs');
+  , fs = require('fs')
+  , https = require('https');
 
 const date = require('date-and-time');
 
@@ -25,7 +26,7 @@ app.get('/', function (req, res) {
   // Base URL
   base_url = req.headers.host
   if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
-    base_url = "http://" + base_url;
+    base_url = "https://" + base_url;
   }
 
   // No Data Available
@@ -111,7 +112,7 @@ app.get('/workers', function (req, res) {
   // Base URL
   base_url = req.headers.host
   if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
-    base_url = "http://" + base_url;
+    base_url = "https://" + base_url;
   }
 
   // No Data Available
@@ -159,7 +160,7 @@ app.get('/worker/*', function (req, res) {
   // Base URL
   base_url = req.headers.host
   if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
-    base_url = "http://" + base_url;
+    base_url = "https://" + base_url;
   }
 
   // No Data Available
@@ -240,7 +241,7 @@ app.get('/connect', function (req, res) {
   // Base URL
   base_url = req.headers.host
   if (!base_url.startsWith("http://") || !base_url.startsWith("https://")){
-    base_url = "http://" + base_url;
+    base_url = "https://" + base_url;
   }
 
   // No Data Available
