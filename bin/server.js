@@ -34,9 +34,9 @@
   */
  server.listen(port, function () {
   console.log(
-    "Example app listening on port 3000! Go to https://localhost:3000/"
+    "Site listening on port 42000! Go to https://localhost:42000/"
   );
-})
+  });
  server.on('error', onError);
  server.on('listening', onListening);
  
