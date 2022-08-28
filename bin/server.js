@@ -32,11 +32,7 @@
  /**
   * Listen on provided port, on all network interfaces.
   */
- server.listen(port, function () {
-  console.log(
-    "Site listening on port 42000! Go to https://localhost:42000/"
-  );
-  });
+ server.listen(port);
  server.on('error', onError);
  server.on('listening', onListening);
  
