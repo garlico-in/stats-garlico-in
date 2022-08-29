@@ -1,0 +1,24 @@
+FROM node:18.8-slim
+WORKDIR /root
+
+RUN apt-get update -y
+RUN apt-get install git -y
+RUN apt-get upgrade -y
+
+EXPOSE 42000
+
+RUN git clone https://github.com/garlico-in/stats-garlico-in.git /stats
+
+ADD privkey.pem /stats/privkey.pem
+ADD fullchain.pem /stats/fullchain.pem
+
+WORKDIR /stats
+
+RUN npm install
+
+RUN apt-get remove git -y
+RUN apt-get autoremove -y
+
+WORKDIR /stats
+
+ENTRYPOINT ["npm", "start", "run"]
