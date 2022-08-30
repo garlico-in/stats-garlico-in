@@ -37,7 +37,6 @@
 * Support for all GRLC address types
 * Solo "pool" option
 
-
 ## How To Mine
 
 To mine you will need a mining client and a Garlicoin address from a Garlicoin wallet.  Due to the volume of transactions, it is recommended you use Garlicoin Core for this wallet.  Other clients will may have trouble downloading the transaction data, but your coins will be safe.
