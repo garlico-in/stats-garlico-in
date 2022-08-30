@@ -114,7 +114,7 @@ This software uses the following open source packages:
 
 ## Support
 
-For support, please join <a href="http://garlicoin.io" target="_blank">the Garlicoin Discord (GRLC'Cord)</a>
+For support, please join <a href="https://discord.gg/zmUTZtUPXT" target="_blank">the Garlicoin Discord (GRLC'Cord)</a>
 
 ## License
 
@@ -151,6 +151,7 @@ To launch your own pool or private pool, you can use the [Blinkhash](https://git
 > [www.garlico.in](https://www.garlico.in) &nbsp;&middot;&nbsp;
 > GitHub [@garlico-in](https://github.com/garlico-in/) &nbsp;&middot;&nbsp;
 > Github [@HoorayJorge](https://github.com/HoorayJorge/)
+> Discord [GRLC'cord](https://discord.gg/zmUTZtUPXT)
 
 
 
