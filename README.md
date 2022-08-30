@@ -153,5 +153,8 @@ To launch your own pool or private pool, you can use the [Blinkhash](https://git
 > Github [@HoorayJorge](https://github.com/HoorayJorge/)
 > Discord [GRLC'cord](https://discord.gg/zmUTZtUPXT)
 
+<p align="center"><a href="https://www.garlico.in"><img src="https://stats.garlico.in/images/grlc_flag.png" alt="The Garlicoin Federation" width="100"></a>
+<br>
+
 
 
