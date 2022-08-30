@@ -69,6 +69,8 @@ $ sgminer --algorithm allium -o stratum+tcp://pool.garlico.in:3002 -u grlc1qu2sv
 # Singapore
 * stratum+tcp://sg.node.garlico.in:3002
 
+# Ireland
+* stratum+tcp://ie.node.garlico.in:3002
 
 # Port 3002 - TCP Pooled Vardiff (I:4, Mi:1, Mx:25)
 # Port 3002 - TLS Pooled Vardiff (I:4, Mi:1, Mx:25)
@@ -83,8 +85,8 @@ $ sgminer --algorithm allium -o stratum+tcp://pool.garlico.in:3002 -u grlc1qu2sv
 <a href="https://github.com/fancyIX/ccminer/releases">
     <img src="https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/05061935269l.jpg" width="100" alt="CCMINER by FANCYIX"/>
 </a>
-<a href="https://github.com/fancyIX/ccminer/releases">
-    <img src="https://www.dsogaming.com/wp-content/uploads/2020/09/AMD-RDNA-2-temp.jpg" width="100" alt="CCMINER by FANCYIX"/>
+<a href="https://github.com/fancyIX/sgminer-phi2-branch/releases">
+    <img src="https://www.dsogaming.com/wp-content/uploads/2020/09/AMD-RDNA-2-temp.jpg" width="100" alt="SGMINER by FANCYIX"/>
 </a>
 </p>
 
