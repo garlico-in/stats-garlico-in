@@ -91,7 +91,7 @@ $ sgminer --algorithm allium -o stratum+tcp://pool.garlico.in:3002 -u grlc1qu2sv
 
 ## Credits
 
-This software uses the following open source packages:
+A special thank you to everyone who directly or indirectly supported this effort:
 
 - [FreshGRLC](http://pool.freshgrlc.net)
 - [@nuc1e4r5n4k3 ](https://github.com/nuc1e4r5n4k3)
