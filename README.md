@@ -102,6 +102,7 @@ This software uses the following open source packages:
 - [The Garlicoin Federation](https://garlicoin.io/garlicoin-federation/)
 - [@Studio271 a.k.a. Anime Garlicoin](https://github.com/AnimeGarlicoin)
 - [Silver Tongue Studio](https://www.twitch.tv/silver_tongue_studio)
+- [@rajatscibi](https://github.com/rajatscibi)
 - [Pa7i & GarlicSquire](https://garlicsquire.com/)
 - [@notafoolsgarden](https://github.com/notafoolsgarden)
 - [Kryptonite](https://github.com/ryan-shaw)
