@@ -21,7 +21,8 @@
   <a href="#downloads">Downloads</a> •
   <a href="#credits">Credits</a> •
   <a href="#support">Support</a> •
-  <a href="#license">License</a>
+  <a href="#license">License</a> •
+  <a href="#fork">Fork</a>
 </p>
 
 <p align="center">
@@ -106,6 +107,9 @@ This software uses the following open source packages:
 - [@notafoolsgarden](https://github.com/notafoolsgarden)
 - [Kryptonite](https://github.com/ryan-shaw)
 - [darrienkek](https://www.twitch.tv/darrienkek)
+- [Blinkhash](https://blinkhash.com/)
+- [Matthew Little (@zone117x), Creator of NOMP](https://github.com/zone117x)
+- [Nicsa, Creator of Blinkhash](https://github.com/blinkhash)
 - And many more who supported this effort!
 
 ## Support
@@ -115,6 +119,24 @@ For support, please join <a href="http://garlicoin.io" target="_blank">the Garli
 ## License
 
 [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
+## Fork
+
+To fork the website, update the frontend and API endpoints.
+
+```bash
+# Clone the repo
+$ git clone https://github.com/garlico-in/stats-garlico-in.git
+
+# Install
+$ npm install
+
+# Start the webapp
+$ npm start run
+```
+
+To launch your own pool or private pool, you can use the [Blinkhash](https://github.com/blinkhash/foundation-v1-server) node.js fork of NOMP.  You can find the documentation [here](https://blinkhash.com/docs).
+<br>
 
 ---
 
