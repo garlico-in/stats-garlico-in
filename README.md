@@ -110,6 +110,7 @@ This software uses the following open source packages:
 - [Blinkhash](https://blinkhash.com/)
 - [Matthew Little (@zone117x), Creator of NOMP](https://github.com/zone117x)
 - [Nicsa, Creator of Blinkhash](https://github.com/blinkhash)
+- [@danielradosa](https://github.com/danielradosa)
 - And many more who supported this effort!
 
 ## Support
@@ -133,6 +134,14 @@ $ npm install
 
 # Start the webapp
 $ npm start run
+
+## OR
+
+# Build with Docker Compose
+$ sudo docker-compose -f docker-compose.yml build
+
+#Start the container
+$ sudo docker-compose -f docker-compose.yml up -d
 ```
 
 To launch your own pool or private pool, you can use the [Blinkhash](https://github.com/blinkhash/foundation-v1-server) node.js fork of NOMP.  You can find the documentation [here](https://blinkhash.com/docs).
