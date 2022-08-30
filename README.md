@@ -42,14 +42,14 @@
 
 To mine you will need a mining client and a Garlicoin address from a Garlicoin wallet.  Due to the volume of transactions, it is recommended you use Garlicoin Core for this wallet.  Other clients will may have trouble downloading the transaction data, but your coins will be safe.
 
-For a mining client, the Federation Pool recommends ccminer or sgminer by [FancyIX](https://github.com/fancyIX).  Links for each can be found in the <a href="#downloads">downloads</a> section.
+For a mining client, the Federation Pool recommends ccminer or sgminer by [@FancyIX](https://github.com/fancyIX).  Links for each can be found in the <a href="#downloads">downloads</a> section.
 
 ```bash
 # CCMINER
-$ ccminer -a allium -o stratum+tcp://pool.garlico.in:3002 -u GR1Vcgj2r6EjGQJHHGkAUr1XnidA19MrxB --max-temp=85 --submit-stale
+$ ccminer -a allium -o stratum+tcp://pool.garlico.in:3002 -u grlc1qu2svj6l7qkk2esv5tx9csdxfsru7l90ys9u38u --max-temp=85 --submit-stale
 
 # SGMINER
-$ sgminer --algorithm allium -o stratum+tcp://pool.garlico.in:3002 -u GR1Vcgj2r6EjGQJHHGkAUr1XnidA19MrxB -p x -I 15
+$ sgminer --algorithm allium -o stratum+tcp://pool.garlico.in:3002 -u grlc1qu2svj6l7qkk2esv5tx9csdxfsru7l90ys9u38u -p x -I 15
 ```
 
 > **Note**
