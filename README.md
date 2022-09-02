@@ -27,6 +27,7 @@
 
 <p align="center">
   <img src="https://www.modernanalyst.com/Portals/0/Public%20Uploads%204/Beta-Launch-2-Fotolia_30472900_XS.jpg" width="200"></a>
+  <img src="https://stats.garlico.in/images/v0180_updated.png" width="100"></a>  
 </p>
 
 ## Pool Details
