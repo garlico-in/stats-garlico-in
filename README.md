@@ -32,7 +32,7 @@
 
 ## Pool Details
 
-* (Coming Soon) Donation f=port for Garlicoin Development
+* (Coming Soon) Donation port for Garlicoin Development
 * 0% Fee for everyone
 * 4 regional servers for fewer stale shares
 * Support for all GRLC address types
